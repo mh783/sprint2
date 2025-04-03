@@ -22,6 +22,6 @@ urlpatterns = [
     path('', views.index),
     path('', include('measurements.urls')),
     path('', include('variables.urls')),
-    path('examenes/', include('examen.urls')),
+    path('', include('examen.urls')),
 
 ]
