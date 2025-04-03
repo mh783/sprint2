@@ -4,7 +4,7 @@ from .models import Examen
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from logic_examen import create_examen, get_examenes
+from examen.logic.logic_examen import create_examen, get_examenes
 
 def examen_list(request):
     examenes = get_examenes()
