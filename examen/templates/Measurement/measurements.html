@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="content">
+    <div class="">
+        <div class="page-header-title">
+            <h4 class="page-title">Últimos Diez Exámenes</h4>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="page-content-wrapper">
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr style="color:#0E2EB0">
+                            <th>Tipo</th>
+                            <th>Fecha</th>
+                            <th>Archivo</th>
+                            <th>Estado</th>
+                            <th>Resumen</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        {% for examen in examen_list %}
+                        <tr>
+                            <td>{{ examen.tipo }}</td>
+                            <td>{{ examen.fecha }}</td>
+                            <td>{{ examen.archivo }}</td>
+                            <td>{{ examen.estado }}</td>
+                            <td>{{ examen.resumen_resultados }}</td>
+                        </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+
+                    <div style="text-align:center;">
+                        <button type="button" class="btn btn-primary waves-effect waves-light"
+                                onClick=" window.location.href='/' ">
+                            Volver
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
