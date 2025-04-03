@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.postgres.fields import JSONField
 
 class Examen(models.Model):
     TIPO_CHOICES = [
@@ -13,7 +14,7 @@ class Examen(models.Model):
     estado = models.CharField(max_length=50, default='pendiente')
     resumen_resultados = models.TextField(blank=True, null=True)
     observaciones = models.TextField(blank=True, null=True)
-    datos_adicionales = models.JSONField(default=dict)
+    datos_adicionales = JSONField(default=dict)
 
     def __str__(self):
         return f"{self.tipo} - {self.fecha}"
