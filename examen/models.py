@@ -9,11 +9,11 @@ class Examen(models.Model):
     ]
 
     tipo = models.CharField(max_length=10, choices=TIPO_CHOICES)
-    fecha = models.DateField(auto_now_add=True)
+    fecha = models.CharField(auto_now_add=True)
     archivo = models.CharField(max_length=255)  # Simula ruta o nombre de archivo
     estado = models.CharField(max_length=50, default='pendiente')
-    resumen_resultados = models.TextField(blank=True, null=True)
-    observaciones = models.TextField(blank=True, null=True)
+    resumen_resultados = models.CharField(blank=True, null=True)
+    observaciones = models.CharField(blank=True, null=True)
     datos_adicionales = JSONField(default=dict)
 
     def __str__(self):
