@@ -83,6 +83,14 @@ DATABASES = {
         'PASSWORD': 'isis2503',
         'HOST': '10.128.0.15',
         'PORT': '5432',
+    },
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'monitoring_db',
+        'USER': 'monitoring_user',
+        'PASSWORD': 'isis2503',
+        'HOST': '10.128.0.4',
+        'PORT': '5432',
     }
 }
 
